@@ -1,0 +1,166 @@
+#boton{
+    display:block;
+    width:200px;
+    padding:15px;
+    border:1px solid red;
+    background:#eee;
+    margin:20px;
+    text-align:center;
+    text-transform:uppercase;
+    font-family:Impact,Courier,Arial,"Courier New",sans-serif;
+    color:rgb(255, 0, 0);
+   /*transition:15s;*/
+    /*transition:background-color, width,color, 5s;*/ 
+   
+    }
+
+     /*PARA Q FUNCIONE UNA TRANSITION NECESITA UNA PSEUDOCLASE*/
+  #boton:hover{
+    background: steelblue;
+    width: 400px;
+    color: chartreuse;
+ }
+
+
+ #caja{
+    background: tomato;
+    width: 200px;
+    height: 200px;
+    /*clip-path: circle(50% at center);*/
+    clip-path: circle(50% at top left);
+    margin: 20px;
+    transition-property: clip-path;/*la propiedad que voy a aplicarle la transition*/
+    transition-duration: 2s;/*lo q dura la transition*/
+    transition-timing-function:ease ;/*las velocidades*/
+    transition-delay: 1s;/*el tiempo de espera para q la transition se ejecute*/
+    /*ease ease-in ease-in-out ease-out linear*/
+}
+
+.container:hover #caja{
+    clip-path: circle(150% at top left);
+    }
+
+    #caja2 {
+        margin-top: 25px;
+        width: 250px;
+        height: 250px;
+        background: lightseagreen;
+        color: white;
+        border: 5px solid black;
+        font-size: 20px;
+        text-align: center;
+        /*lo aline en vertical*/
+        line-height: 200px;
+        /*aplico la animacion*/
+        animation-name: desplazamiento;
+        /*el tiempo de la animacion*/
+        animation-duration: 10s;
+        /*si la quiero hacer infinita o no*/
+        animation-iteration-count: infinite;
+        /*hay muchos pero en este caso q vaya a la misma velocidad*/
+        animation-timing-function: linear;
+      }
+
+      /*PARA HACER UNA ANIMACION PRIMERO DEFINO LOS @keyframes*/
+
+
+/*MANERA CORTA*/
+
+
+/*1 le pongo nombre desplazamiento */
+
+
+/*2 le pongo como empieza y como termina con form y to*/
+
+
+
+/*@keyframes desplazamiento {
+  from {
+      margin-left: 0px;
+  }
+  to {
+      margin-left: 1200px;
+  }
+}*/
+
+
+/*MANERA COMPLETA*/
+
+
+/*lo desplazo lado a lado a la caja*/
+
+/*@keyframes desplazamiento {
+    0% {
+        margin-left: 0px;
+    }
+    50% {
+        margin-left: 1090px;
+    }
+    100% {
+        margin-left: 0px;
+    }
+  }*/
+
+
+
+  /*aca la hago rotar 
+  (deg se refiere a grados ,especifica ángulos de rotación)*/
+
+/*@keyframes desplazamiento {
+    0% {
+        margin-left: 0px;
+        transform: rotate(0deg);
+    }
+    50% {
+        margin-left: 1090px;
+        transform: rotate(370deg);
+    }
+    100% {
+        margin-left: 0px;
+        transform: rotate(0deg);
+    }
+  }*/
+
+
+  /*la hago rotar y se va convirtiendo en pelota*/
+
+/*@keyframes desplazamiento {
+    0% {
+        margin-left: 0px;
+        transform: rotate(0deg);
+    }
+    50% {
+        margin-left: 1090px;
+        transform: rotate(370deg);
+        border-radius: 999px;
+    }
+    100% {
+        margin-left: 0px;
+        transform: rotate(0deg);
+    }
+  }*/
+
+
+  /*la hago rotar y se va convirtiendo en pelota y cambia de color y cambia el borde*/
+
+@keyframes desplazamiento {
+    0% {
+        margin-left: 0px;
+        transform: rotate(0deg);
+    }
+    50% {
+        margin-left: 1090px;
+        transform: rotate(370deg);
+        border-radius: 999px;
+    }
+    75% {
+        background: red;
+    }
+    77% {
+        border: 10px dashed blue;
+    }
+    100% {
+        margin-left: 0px;
+        transform: rotate(0deg);
+    }
+  }

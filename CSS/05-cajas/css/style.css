@@ -1,0 +1,69 @@
+* {
+    /*asterisco es para toda la pagina*/
+    margin: 0px;
+    /* margin para q no haya espacios*/
+    padding: 0px;
+    /*padding para q se separe de los bordes*/
+  }
+
+  body {
+    /*para q se separe de los bordes de todo el body*/
+    padding: 40px;
+  }
+
+  #cajas {
+    /*un ancho maximo de pantalla*/
+    max-width: 1035px;
+    /*borde tamaño tipo y color*/
+    border: 1px solid black;
+  }
+
+  .caja{
+ /*se comporta como una caja , SI TUVIERA ENLACES DEBERIA PONER display: inline-block; PORQUE LO Q HACE ES q este uno al lado del otro y q se puedan usar todas las propiedades de comportamiento de caja (pero no se podra centrr elemento con margin auto)*/
+ display: block;/*display:none; desaparece el elemento o lo saca del flujo de flotado*/
+  /*anchura*/
+  width: 250px;
+  /*altura*/
+  height: 250px;
+  background-color: lightblue;
+  /*borde tamaño tipo y color*/
+  border: 10px solid red;
+  /*separa el margen de arriba*/
+  margin-top: 15px;
+  /*le da el espacio entre los elementos y el margen de la parte de abajo*/
+  margin-bottom: 15px;
+  /*le da un margen hacia la izquierda*/
+  margin-left: 25px;
+  /*para q se separe de los bordes un margen interno por todas partes*/
+  padding: 20px;
+  /*le da un espacio de la parte de abajo de las cajas*/
+  padding-bottom: 34px;
+  /*FLOTAR LAS CAJAS O SEA MOVERLAS con float q se debe aplicar cuando el display es en block*/
+  /*las cajas se moveran a la izquierda*/
+  float: left;
+  /*las cajas se moveran a la derecha*/
+  /*float: right;*/
+  /*las cajas se quedan por defecto*/
+  /*float: none;*/
+
+  }
+
+  .caja p {
+    /*el grosor de la letra*/
+    font-weight: bold;
+    /*centra el texto*/
+    text-align: center;
+    /*tamaño de letra*/
+    font-size: 20px;
+    /*le estamos dando fuente*/
+    font-family: Arial, Helvetica, sans-serif;
+    /*modifica la altura entre linea y linea /*un alto al texto verticalmente*/
+    line-height: 250px;
+  }
+
+  .clearfix {
+    /*las cajas se quedan por defecto*/
+    float: none;
+    /*limpia todos los flotados*/
+    clear: both;
+  }

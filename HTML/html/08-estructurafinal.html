@@ -1,0 +1,75 @@
+<!DOCTYPE html><!--informa al navegador que versión de HTML se usó para escribir el documento-->
+<!--<html> indica q es un documento html-->
+<html lang="en"><!--lang es utilizado para indicar el idioma del contenido de un elemento-->
+<head><!-- head va lo q es la cabecera no puede ver el usuario-->
+	<!--los metadatos se escriben dentro de head y sirven para posicionar la busqueda o sea q te encuentre primero-->
+     <meta charset="UTF-8"><!--Este elemento simplemente especifica la codificación de caracteres del documento — es decir, el conjunto de caracteres que el documento puede usar. utf-8 es un conjunto de caracteres universal que incluye casi todos los caracteres de casi cualquier idioma humano-->
+     <title>Document</title>
+	 <!--ESTOS SON LOS METADATOS-->
+	 <!--en content ponemos la descripcion de mi sitio ponemos un fragmento de texto recomienda 150 170 caracteres dependiendo de lo q dice me encuentran -->
+	 <meta name="description" content="diseño, desarrollo, paginas web" /><!--este ya ni se usa ..las palabras disenio etc. son de q seria mi pagina para q google busqe-->
+	 <meta name="viewport" content="width=device-width, initial-scale=1"><!-- proporciona al navegador instrucciones sobre cómo controlar las dimensiones de la página. Añadir el código width=device-width asegurará que la página se cambie de tamaño para que coincida con el ancho de la pantalla-->
+	 <!--<link>etiqeta especifica la relación entre el documento actual y un recurso externo. rel..Este atributo es usado para definir el tipo de contenido al que se enlaza.-->
+	 <link rel="stylesheet" type="text/css" href="css/estilos.css"><!--para agregar una hoja de estilos type="text/css" para indicar q tipo de contenido voy a mostrar href="estilos.css" especifico la ruta en donde esta-->
+	 <link rel="shortcut icon" href="logo/goku.ico" type="image/x-icon">
+	 
+	 
+</head>
+
+
+<body><!--va el cuerpo-->
+<!--PARTE ENCABEZADO-->
+<header><!-- codigo semantico..header como un encabezado es para q nos busqe mas rapido el navegador-->
+ <div><!--div es un separador de contenido.. es para las imagenes o videos-->
+<img src="img/foto.jpg" width=70 alt="Logotipo de adrian"><!--en caso de q no se muestre la imagen alt haria q aparezca escrito logotipo de adrian-->
+
+</div>
+<nav><!--le digo al navegador q hay un menu-->
+
+   <ul><!--PONGO UL El elemento ul representa una lista no ordenada de ítems-->
+      <li><a href="#">Inicio</a></li><!--con <a href="#"> lo transformo en enlace-->
+      <li><a href="#">Categoria</a></li>
+      <li><a href="#">Categoria 2</a></li>
+   </ul>
+</nav>
+</header>
+
+<!--CONTENIDO SECUNDARIO-->
+<!--se pone section para decirle al navegador q esta es la parte secundaria-->
+<section class="wrapper"><!--wrapper es un contenedor y le decimos cuantas section mas qeremos-->
+<section class="main">
+<article><!--article para q google busqe es el q mas importancia le va a dar-->
+<h2>Titulo de nuestra pagina</h2><!--h2 porqe no podemos utilizar h1 varias veces porqe google nos penalizaria-->
+<p>En este capitulo veremos como crear la estructura basica de un sitio con HTML,
+ un sitio con columnas y secciones para cada parte del contenido.
+ Fundamental para comenzar a hacer paginas web.</p>
+</article>
+
+<article><!--article para q google busqe es el q mas importancia le va a dar-->
+<h2>Titulo de nuestra pagina</h2><!--h2 porqe no podemos utilizar h1 varias veces porqe google nos penalizaria-->
+<p>En este capitulo veremos como crear la estructura basica de un sitio con HTML,
+ un sitio con columnas y secciones para cada parte del contenido.
+ Fundamental para comenzar a hacer paginas web.</p>
+</article>
+</section><!--main nos va a identificar q es el contenido principal es decir los articulos-->
+<aside><!--aside significa representa una sección de una página que consiste en contenido que está indirectamente relacionado con el contenido principal del documento. contenido no importante para el buscador pero pude q si para el usuario-->
+
+<h3>Sidebar</h3>
+<p>En este capitulo veremos como crear la estructura basica de un sitio con HTML,
+ un sitio con columnas y secciones para cada parte del contenido.
+ Fundamental para comenzar a hacer paginas web.</p>
+	<p><!--<p>para poner parrafos-->
+	muy sencillos a un precio <i>muy barato</i><!--<i>para poner las letras como italica -->, que si ya queremos algo mas avanzado entonces
+	 si podremos <b>optar por algo mas caro</b><!-- <b>pone negrita las letras-->.muy sencillos <br/><!-- le estoy agregando un espacio-->a un precio muy barato,
+	 que si ya queremos algo mas avanzado entonces<!-- <strong>tambien permite poner negrita ES MAS EFICAz PARA EL USUARIO SI NECESITA Q EL NAVEGADOR LO BUSQE PERO NO SE PUEDE ABUSAR HAY Q ALTERNAR CON b>-->
+	 si podremos <span>optar</span><!--<span>para darle mas enfasis al buscador para buscar--> por algo mas caro.
+	</p>
+</aside>
+</section>
+
+<footer><!--footer le estamos diciendo q hay un pie de pagina-->
+<p>Adrian Lisciotti - CarreraDesarrolloWeb 2024</p>
+</footer>
+
+</body>
+</html>

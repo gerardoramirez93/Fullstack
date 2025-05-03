@@ -1,0 +1,182 @@
+*{
+  box-sizing: border-box;
+  box-sizing: content-box;/*es el q esta por defecto agrega pixel a la caja al tener mas contenido ,padding o border*/
+}
+/*PARA BACKGROUND*/
+.container{
+  width: 30%;
+  height: 300px;
+  margin: 30px auto;
+  /* background: rgb(100,100,250); */
+  /*background:blue url(../img/spidy.png) no-repeat fixed center*/
+  background-color:rgb(100, 100, 250);
+  /*background-image: url(../img/spidy.png), url('../img/sun.png');/*se pone una de fondo y la otra se ve sobre ella*/
+  background-image: url(../img/spidy.png);
+  background-repeat:no-repeat;
+  /*background-position:top bottom right left;*//*primer y segundo valor para el eje vertical 
+  y los otros dos valores eje horizontal (lados) puede ser como numero o palabras*/
+  background-position:top 10px right 50px;/*asi dice arriba 10 px y derecha 50*/
+  background-position: center;
+  /*background-size: 30px 20px;/*ancho y alto*/
+  /*background-size: contain;/*escala la imagen lo mas posible sin estirar*/
+  background-size: cover;/*ocupa el 100% del elemento sin estirar seria lo mejor*/
+}
+
+.atachment{
+  width: 100%;
+  height: 100vh;/*representaría el 100% de la altura de la ventana gráfica ayuda al responsive*/
+  background-image: url('../img/img-hero.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.fixed{
+  background-attachment: fixed;/*el fondo del elemento se qeda fijo 
+  e interpreta q va a usar el 100% de ancho y alto ese fondo*/
+}
+
+.degradado{
+  width: 80%;
+  height: 400px;
+  margin: 30px auto;
+  background: steelblue;
+  /* background-image:linear-gradient(direction, color stop, color stop); */
+/*crimson 30% q su transicion de degradado acabe en el 30%*/
+  background-image: linear-gradient(to bottom,red,pink);
+  background-image: 
+  linear-gradient( crimson 30%, steelblue 80%);
+}
+
+.header{
+  padding: 0.1px;
+  height: 650px;
+  background-image:linear-gradient(#00008b7e, #4683b481), url(../img/hero.jpg);/*
+  le agrega un degradado transparente a la imagen podes optener... https://cssgradient.io/...
+  https://webgradients.com/...
+  https://uigradients.com/#Mini*/
+  /*120deg Esto indica el ángulo del degradado. o sea desde donde empieza el degradado
+  0°: de izquierda a derecha.
+  90°: de arriba a abajo
+  120°: ligeramente inclinado hacia abajo y a la derecha
+  #a6c0fe7e color con opacidad y 0% significa que este color comienza a aplicarse desde el inicio del degradado
+  #f680848f color con opacidad
+  100%: Este color se aplica completamente al final del degradado*/
+  background-image: linear-gradient(120deg, #a6c0fe7e 0%, #f680848f 100%), url(../img/hero.jpg);/*deg es %*/
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  background-image: linear-gradient(to bottom, hwb(81 18% 7% / 0.049), #009FFF);
+}
+
+/*BOX MODEL padding*/
+
+
+.box{
+  width: 300px;
+  height:150px ;
+}
+
+.box1{
+  background: steelblue;
+  border: 1px solid black;
+  /*
+  margin-top: 50px;
+  margin-bottom:30px;
+  margin-right: 25px; 
+  margin-left: 30px;
+  */
+  /* margin:top right bottom left; */
+  /* margin: 50px 30px 25px 30px; */
+  /*margin:40px 80px;*/  /*significa el primer valor arriba y abajo el segundo valor los costados*/
+  /*margin:40px 0 80px 0;*/ /*tambien asi*/
+  /*margin:40px 50px 80px;*/ /*tambien asi significa q el ultimo valor toma el del segundo q es el de la derecha*/
+  /* margin: 0 auto;  */ /*con auto lo centro PARA CENTRAR EL ELEMENTO DEBE TENER UN ANCHO y el 0 es para q no traiga errores si se usa less o flexboox q significa arriba y abajo 0px ,auto es el valor hacia los costado*/
+   margin-bottom: 50px; 
+ 
+}
+
+
+/*CUANDO TOCAN LOS MARGENES SOLO SE LE TOMA EL VALOR ADL MAYOR MARGEN
+POR  ejemplo si una caja q esta primer tiene un margin-bottom: 50px;
+y la segunda caja q se encuentra abajo de esta tiene un margin-top: 30px;
+ahi chocarian los margenes y toma al mayor valor*/
+
+/* un elemento hijo puede hacer colapso de margen con su padre y para separarlo del padre 
+se podria colocando un padding*/
+
+
+/*El padding en una caja esos pixel se agregarian a la dimension de la caja
+si no quiero ese comportamiento y quiero q la caja tenga un mismo tamaño 
+se coloca esta propiedad  box-sizing: border-box;*/
+
+.box2{
+  padding: 20px;
+  /* padding:top right bottom left; */
+  background: REBECCAPURPLE;
+  margin-top: 30px;
+  margin-left: 20px;
+  overflow: hidden;/*todo lo  q se desborada lo oculta*/
+  border: 2px solid steelblue;
+}
+
+
+/*PARA BORDER*/
+
+
+.box{
+  background: orangered;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  margin-top: 40px;
+
+  /* border: width style color; */
+  /* border: 10px dashed brown; */
+  
+  
+
+  /* border-width:top right bottom left;
+  border-style:top right bottom left;
+  border-color:top right bottom left; */
+
+  /* border-top: 10px solid brown;
+  border-right: 5px dashed white;
+  border-bottom:8px double black;
+  border-left:8px dotted steelblue ; */
+
+  /*TODOS LOS BORDES https://developer.mozilla.org/es/docs/Web/CSS/border-style*/
+  /*generador de bordes https://border-radius.com/*/
+
+  border-top-width: 20px;
+  border-top-style: double;
+  border-top-color: crimson;
+
+  border-right-width: 30px;
+  border-right-style: dashed;
+  border-right-color: white;
+
+  border-bottom-width: 25px;
+  border-bottom-style: solid;
+  border-bottom-color: steelblue;
+
+  border-left-width: 15px;
+  border-left-style: dotted;
+  border-left-color: violet;
+}
+
+
+.img{
+  display: block;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;/*si se empieza a estirar adapta la imagen q se vea bien*/
+  margin: 20px auto;
+  border-radius:50%;/*redondea completamente siempre q haya un mismo alto y ancho*/
+  border-top-left-radius: 50px;
+  border-top-right-radius:20px ;
+  border-bottom-right-radius:30px ;
+  border-bottom-left-radius:100px ; 
+}
+

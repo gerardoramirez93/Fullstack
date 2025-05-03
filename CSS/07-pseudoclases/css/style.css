@@ -1,0 +1,101 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  ul li {
+    font-size: 20px;
+  }
+
+  /*pseudoclase me va a poner todo esto en la primera de la lista*/
+
+ul li:first-child {
+    /*color de la letra*/
+    color: purple;
+    /*una fuente mas negrita*/
+    font-weight: bold;
+  }
+
+  /*me deja elejir el elemento q quiero poniendo el numero*/
+
+ul li:nth-child(2) {
+    /*color de la letra*/
+    color: orangered;
+    /*una fuente mas negrita o el grosor*/
+    font-weight: bold;
+  }
+
+  /*ultimo elemento*/
+
+ul li:last-child {
+    /*color de la letra*/
+    color: gray;
+    /*una fuente mas negrita*/
+    font-weight: bold;
+  }
+
+  #mi-enlace {
+    font-size: 30px;
+    color: gray;
+  }
+
+  /*me pone al enlace ese color si no visite la pagina*/
+
+  #mi-enlace:link {
+    color: red;
+  }
+
+  /*me pone al enlace ese color si ya visite la pagina*/
+
+#mi-enlace:visited {
+    color: orangered;
+  }
+
+  .nav__links{
+    background: red;
+  }
+
+  /*evento target*/
+  .nav__links:target{
+    background-color: blue;
+}
+
+/*:root la raiz del documento es mas especifico q html{}*/
+:root{
+--blue:blue;/*creamos una variable*/
+}
+
+h1{
+  color: var(--blue);
+}
+
+/*pseudoelemento se señala con :: por ejemplo p::selection seria q la etiqeta p si la pintamos con el 
+mouse haria tal cosa. tambien esta el ::first-line seria la primer linea del parrafo
+::first-letter la primer letra del parrafo
+Tambien tenes el ::placeholder para un input ejemplo input[type="text"]::placeholder
+y el ::before significa poner tal cosa antes del contenido del elemento en cuestion y ::after
+seria despues y la forma de ingresar el contenido es con content si o si content hay q agregarlo
+aunqe no pongas nada de texto, despues podes agregar un elemento si qeres*/ 
+
+/*p::selection{
+    background-color: blueviolet;
+}*/
+
+/*p::first-line{
+    background-color: brown;
+}*/
+
+p::first-letter{
+    background-color: chartreuse;
+}
+
+input[type="text"]::placeholder{
+    color: red;
+  }
+
+  p::after{
+    content: '';
+    background-image: url('../images/icon-hamburger.svg');
+    position: absolute;
+    width: 15px;
+    height: 15px;
+  }

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Formulario</title>
+</head>
+<body>
+    
+<form action="" method="GET"><!--form etiqeta del fomulario q recibe atributos como action q recibe una url q se encarga de procesar los datos del formulario..y luego por q metodo vamos a mandar la informacion get o post-->
+
+<label for="nom">Ingrese su nombre:</label>
+<br>
+<!--<input type="text" value="Escribe tu nombre">--><!--CON VALUE HACEMOS Q LO ESCRITO ESTE EN EL TEXT-->
+<input type="text" placeholder="Escribe tu nombre" maxlength="8" minlength="1" name="nombre" id="nom"> <!--con size="10" cambiamos el tamaño del text..maxlength nos dice la cantidad de caracteres el ID nos sirve por ejemplo para asignar el texto del label a este input asi darle el focus -->
+<br><br>
+<label>Ingrese su password:</label>
+<br>
+<input type="password" name="password">
+<br><br>
+<label>Ingrese su email:</label>
+<br>
+<input type="email" name="email" id="">
+<br><br>
+<label>Ingrese su edad:</label>
+<br>
+<input type="number" min="1" max="30" name="edad" id="">
+<br>
+<br></br>
+<input type="checkbox" name="sexo" value="masculino" id="">Masculino
+<input type="checkbox" name="sexo" value="femenino" id="">Femenino
+<br></br>
+<!--con sexo dentro de name especificamos al servidor lo q qeremos por eso solo se puede marcar uno-->
+<input type="radio" name="sexo" >Hombre
+<input type="radio" name="sexo" >Mujer
+
+ <br></br>
+ <input type="button" value="Boton-Enviar"><!--un simple boton-->
+ <input type="submit" value="Boton-submit"><!--este es un boton para q envie los datos pero eso depende de los atributos q agregemos en form-->
+ <br></br>
+ <select name="pais" id=""><!--select es para encerrar las option y hacer un combo_box (es similar a una lista desplegable, excepto que el objeto acepta la entrada de texto por el usuario y que dispone de dos opciones específicas)-->
+ <option value="Mexico">Mexico</option>
+ <option value="Colombia">Colombia</option>
+ </select>
+ <!--color y rango-->
+ <input type="color" name="color" id="">
+ <input type="range" name="rango" id="">
+
+</form>
+
+</body>
+</html>

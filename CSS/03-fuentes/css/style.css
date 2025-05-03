@@ -1,0 +1,68 @@
+/*importar una fuente de https://fonts.google.com una vez hayamos descargado el zip lo colocamos en nuestro proyecto y aca
+ponemos esto @font-face q es una propiedad de css3*/
+@font-face {
+  font-family: RubikDoodleShadow;/*colocamos el nombre de la fuente inventado por mi */
+  src: url(../fonts/RubikDoodleShadow/RubikDoodleShadow-Regular.ttf);/*colocamos la direccion donde esta la fuente*/
+  }
+
+  @font-face {
+      font-family: NotoSansJapanese;/*colocamos el nombre de la fuente inventado por mi */
+      src: url(../font/NotoSansJapanese/NotoSansJP-VariableFont_wght.ttf);/*colocamos la direccion donde esta la fuente*/
+      }
+
+  h1{
+    font-family: Arial,Helvetica,sans-serif;
+    font-style: italic;/*como quiero q sea la letra italic en cursiva en este caso*/
+    font-family: 'Roboto', sans-serif;/*la fuente es de https://fonts.google.com este es un ejemplo cuando no descargo la fuente el link esta en el head del index para llamarla desde la pagina*/
+    text-transform: uppercase;/*transforma en mayuscula al texto*/
+    font-size: 45px;
+
+    /*Colores*/
+/* ACA LOS PODEMOS ENCONTRAR https://www.w3schools.com/cssref/css_colors.asp*/
+
+/*Colores del sistema*/
+
+
+color:mediumpurple;
+/*color: transparent;/*transparente*/
+
+/*Colores hexadecimales*/
+
+color: #000000;/*negro*/
+/*color: #cccccc;/*gris claro*/
+/*color: #ffffff;/*blanco*/
+/*color: #eeeeee;/*gris clarito*/
+
+
+
+/*Colores RGB (la mezcla de 3 colores)*/
+/* para generar un color de estos ir a https://www.css3maker.com/css-3-rgba.html
+copiar el codigo el primero background-color: rgba(166, 96, 97, 0.6); y sacarle el background- y el ultimo parametro 0.6 y la a */
+color: rgb(188, 255, 80);
+
+
+
+/*Colores RGBA (la mezcla de 3 colores y poner una opacidad)*/
+
+color: rgba(188, 255, 80, 0.8);
+  }
+
+   h3
+{
+  font-family: RubikDoodleShadow, "Comic Sans MS";/*aca ponemos el nombre de la fuente creada con @font-face y si no va agarra "Comic Sans MS"*/
+  font-size: 30px;/*tamaño de letra*/
+  font-weight: lighter;/*el grosor de la letra*/
+  color: olive;
+}
+
+p{
+
+font-family: NotoSansJapanese, sans-serif;
+font-size: 18px;
+font-weight: bold;/*el grosor de la letra*/
+
+}
+
+  
+ 
+  

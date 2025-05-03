@@ -1,0 +1,170 @@
+/*ejercicio completo con html y css
+1. crea un documento html y vinculalo con css
+2. crea una estructura html q cuente con un contenedor general,
+cabecera,menu,seccion de contenido principal,barra lateral,
+elementos dentro del contenedor principal,y footer  ****LISTO***
+
+3. todo el contenido debe estar dentro del contenedor general 
+y su ancho debera ser de 1200px y estar centrado LISTO
+4. header debe ocupar el 100% del ancho y tener un texto grande centrado LISTO
+5. menu debe tener los elementos uno al lado del otro LISTO
+6. el contenido principal debe tener un ancho de 70% LISTO
+7. el contenido dentro del contenedor principal debe ser una cuadricula
+con 4 lineas de 2 cajas
+8. la barra lateral debe tener un ancho de 30%
+9. el footer debe tener un ancho del 100% del div q lo contiene 
+y estar debajo del otro
+*/
+
+* {
+    /*margin para que no haya espacios */
+    margin: 0px;
+    /*padding para que se separe de los bordes*/
+    padding: 0px;
+
+    /* para quitar subrayados de enlaces etc */
+    text-decoration: none;
+    
+    /*Para poner fuente*/
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#general {
+    width: 1200px;
+    
+    /*centrar un elemento */
+    /*margin para que no haya espacios y con auto lo centra*/
+    margin: 0px auto;
+
+    /*para que separe un poco de la parte superior*/
+    /*margin-top: 20px;*/
+
+    border: 1px solid #ccc;
+}
+
+#header {
+    /*ancho*/
+    width: 100%;
+
+    /*alto*/
+    height: 100px;
+    background-color: rgb(0, 89, 255);
+    
+    /*centrar el texto*/
+    text-align: center;
+
+    /*centrar verticalmente*/
+    line-height: 90px;
+}
+
+#menu {
+    background: #eeee;
+}
+#menu ul li {
+    /*pone los elementos uno al lado del otro*/
+    /*display: inline-block;*/
+    display: block;
+
+    /*usando la manera de flotado*/
+    float: left;
+    
+    /*metiendo un borde y a la vez un separador que es un borde derecho*/
+    border-right: 1px solid #ccc;
+}
+#menu ul li a {
+    display: block;
+    /*Separa los bordes de todos los lados*/
+    padding: 15px;
+    color: #444; 
+}
+
+/*pseudoclase: :hover (siginifica: cuando pase por allí. Cuando pase el ratón se le pone de ese color*/
+#menu ul li:hover {
+    background: rgb(5, 33, 87);
+    cursor: pointer;
+}
+
+/*:hover para que al pasar el cursor por las letras del link "a", sean blancas*/
+#menu ul li:hover a {
+    color: white;
+}
+
+.clearfix {
+    float: none;
+    clear: both;
+}
+
+#contenido {
+    width: 69%;
+    float: left;
+}
+
+#lateral {
+    float: left;
+    width: 30%;
+    border: 1px solid red;
+
+    /*un minimo de alto de 500px*/
+    min-height: 500px;
+    /*Un máximo de altura para que el texto se salga y hacer ejemplo de overflow*/
+    max-height: 650px;
+    /*Centrar texto*/
+    text-align: center;
+    /*Todo lo que salga del texto lateral no se muestre*/
+    overflow: hidden;
+    /*Se crea barra de desplazamiento*/
+    overflow: scroll;
+    /*Que solo se muestre esa barra en el lateral y no abajo*/
+    overflow-y: scroll;
+    text-align: justify; /*Alineado o justificado*/
+    /* text-indent: 15px; /*Separación y salto de línea entre texto y texto*/
+    /* word-spacing: 10px; /*Separación entre palabras*/
+    /*letter-spacing: 5px; /*Separa entre letra y letra*/
+    /*text-transform: uppercase; /*Convierte en mayúsculas*/
+    /*text-decoration: line-through; /*Tacha el texto*/
+    /*text-decoration: underline; /*Subarayado*/
+}
+#contenido h1 {
+    text-align: center;
+    border-bottom: 1px solid #ccc; /*Espacio entre los elementor y el margen de abajo*/
+    padding: 15px; /*Separa los bordes de todos lados*/
+    color: #444444;
+
+    /*Sombre en el eje x primer valor positivo la sombra se inclina hacia la derecha, negativo hacia la izquierda
+    el segundo valor si es negativo hacia arriba, si es positivo hacia abajo, el tercer valor es para el difuminado
+    gray el color sombra*/
+    text-shadow: 1px 5px 2px gray;
+}
+
+#contenido .caja {
+    width: 40%;
+    height: 250px;
+    background-color: #ccc;
+    border: 1px solid #ccc;
+    color: white;
+    float: left;
+    margin: 20px;
+
+    /*Texto al medio*/
+    text-align: center;
+
+    /*Para que se centre verticalmente*/
+    line-height: 250px;
+    box-shadow: 5px 5px 10px gray;
+    border-radius: 30px; /*Borde redondo a las cajas*/
+   /* border-radius: 30px 20px 5px 10px; /*diferentes bordes a cada lado*/
+}
+
+.sombra-interior {
+    box-shadow: 5px 5px 10px gray inset !important; /*Que lo ponga si o si*/
+}
+
+#footer {
+    width: 100%;
+    height: 55px;
+    line-height: 55px; /*para centrar verticalmente*/
+    background: #eee;
+    text-align: center;
+    color: #444;
+    border-top: 1px;
+}
