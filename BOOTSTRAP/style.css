@@ -1,0 +1,70 @@
+/* Altura fija para las imágenes del carrusel */
+#banner .carousel-item img {
+    height: 700px;
+    object-fit: cover;
+}
+
+/* Enunciados del carrusel */
+#banner .carousel-caption {
+    position: absolute;
+    bottom: 100px; /* Subir el texto a 50px del borde inferior */
+    left: 0;
+    right: 0;
+    padding: 0 15px;
+    text-align: center; /* Centra el texto */
+    z-index: 10; /* Asegura que el texto esté sobre la imagen */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para mejorar la visibilidad */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+/* Estilo para los encabezados y los párrafos dentro del carrusel */
+#banner .carousel-caption h5, 
+#banner .carousel-caption p {
+    color: #ffffff; /* Color blanco */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra para mayor legibilidad */
+    margin: 0;
+    padding: 0;
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    #banner .carousel-item img {
+        height: 500px; /* Reducir la altura de la imagen en pantallas pequeñas */
+    }
+
+    #banner .carousel-caption h5 {
+        font-size: 1.5rem; /* Ajustar el tamaño del texto */
+    }
+
+    #banner .carousel-caption p {
+        font-size: 1rem; /* Ajustar el tamaño del texto */
+    }
+}
+
+/* Ajustes para pantallas muy pequeñas (móviles) */
+@media (max-width: 576px) {
+    #banner .carousel-item img {
+        height: 350px; /* Ajustar la altura de la imagen para móviles */
+    }
+
+    #banner .carousel-caption h5 {
+        font-size: 1.25rem; /* Ajustar tamaño del título */
+    }
+
+    #banner .carousel-caption p {
+        font-size: 0.9rem; /* Ajustar tamaño del párrafo */
+    }
+}
+#servicios h2 {
+    font-weight: bold;
+    color: #333;
+}
+
+#servicios .card img {
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+
+#servicios .card:hover img {
+    filter: none;
+}

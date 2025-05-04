@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alcaldía Municipal La Cima</title>
+
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+            <div class="container">
+                <!-- Logo o nombre -->
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                    <img src="img/logo_lacima.png" alt="Escudo La Cima" width="40" height="40" class="me-2">
+                    <span class="fw-bold">Alcaldía de La Cima</span>
+                </a>
+    
+                <!-- Botón para menú colapsable en móvil -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContenido">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+    
+                <!-- Enlaces del menú -->
+                <div class="collapse navbar-collapse" id="navbarContenido">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link active" href="#">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Nosotros</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Servicios</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Noticias</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section id="banner">
+        <div id="carouselLaCima" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <!-- Slide 1 -->
+                <div class="carousel-item active">
+                    <img src="img/logo_lacima.png" class="d-block w-100" alt="Banner 1">
+                    <div class="carousel-caption d-block">
+                        <h5>Bienvenidos a La Cima</h5>
+                        <p>Comprometidos con el desarrollo de nuestra comunidad.</p>
+                    </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="carousel-item">
+                    <img src="img/banner_lacima1.jpeg" class="d-block w-100" alt="Banner 2">
+                    <div class="carousel-caption d-block">
+                        <h5>Transparencia y Servicio</h5>
+                        <p>Una alcaldía al servicio de su gente.</p>
+                    </div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="carousel-item">
+                    <img src="img/banner_lacima2.jpeg" class="d-block w-100" alt="Banner 3">
+                    <div class="carousel-caption d-block">
+                        <h5>Proyectos en marcha</h5>
+                        <p>Impulsando obras para el bienestar ciudadano.</p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Controles -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselLaCima" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselLaCima" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+                <span class="visually-hidden">Siguiente</span>
+            </button>
+        </div>
+    </section>
+     
+    <section id="nosotros" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h2>Nosotros</h2>
+                    <p>La Alcaldía de La Cima trabaja comprometida con el bienestar y el progreso de nuestra comunidad. Nuestros esfuerzos están orientados a mejorar la calidad de vida, fomentar la participación ciudadana y promover proyectos de desarrollo sostenible.</p>
+                </div>
+                <div class="col-lg-6">
+                    <img src="img/nosotros.jpeg" class="img-fluid" alt="Nosotros">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="servicios" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">Nuestros Servicios</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 shadow">
+                        <div class="card-body text-center">
+                            <img src="img/icono_tramites.svg" alt="Trámites" width="60" class="mb-3">
+                            <h5 class="card-title">Trámites Municipales</h5>
+                            <p class="card-text">Gestiona permisos, partidas de nacimiento, solvencias y más de forma eficiente.</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 shadow">
+                        <div class="card-body text-center">
+                            <img src="img/icono_basura.svg" alt="Recolección" width="60" class="mb-3">
+                            <h5 class="card-title">Recolección de Desechos</h5>
+                            <p class="card-text">Un servicio planificado para mantener limpia y ordenada nuestra ciudad.</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 shadow">
+                        <div class="card-body text-center">
+                            <img src="img/icono_obras.svg" alt="Obras" width="60" class="mb-3">
+                            <h5 class="card-title">Obras Municipales</h5>
+                            <p class="card-text">Ejecución de proyectos para el desarrollo vial, educativo y comunitario.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+      
+
+    <script type="text/javascript" src="bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
