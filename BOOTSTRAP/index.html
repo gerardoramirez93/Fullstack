@@ -7,16 +7,30 @@
 
     <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap-icons/bootstrap-icons.css">
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
-            <div class="container">
-                <!-- Logo o nombre -->
-                <a class="navbar-brand d-flex align-items-center" href="#">
-                    <img src="img/logo_lacima.png" alt="Escudo La Cima" width="40" height="40" class="me-2">
-                    <span class="fw-bold">Alcaldía de La Cima</span>
-                </a>
+        <!-- Redes Sociales -->
+<!-- Barra de redes sociales (fijada arriba del todo) -->
+<div class="bg-dark text-white py-1 fixed-top" style="z-index: 1040;">
+    <div class="container d-flex justify-content-end align-items-center">
+        <a href="#" class="text-white me-3 text-decoration-none">
+            <i class="bi bi-facebook"></i> Facebook
+        </a>
+        <a href="#" class="text-white text-decoration-none">
+            <i class="bi bi-instagram"></i> Instagram
+        </a>
+    </div>
+</div>
+
+<!-- Navbar principal (fijada debajo de la barra de redes sociales) -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm fixed-top" style="top: 32px; z-index: 1030;">
+    <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+            <img src="img/logo_lacima.png" alt="Escudo La Cima" width="40" height="40" class="me-2">
+            <span class="fw-bold">Alcaldía de La Cima</span>
+        </a>
     
                 <!-- Botón para menú colapsable en móvil -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContenido">
@@ -26,11 +40,11 @@
                 <!-- Enlaces del menú -->
                 <div class="collapse navbar-collapse" id="navbarContenido">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item"><a class="nav-link active" href="#">Inicio</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Nosotros</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Servicios</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Noticias</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="#banner">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#nosotros">Nosotros</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#noticias">Noticias</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
                     </ul>
                 </div>
             </div>
@@ -82,7 +96,17 @@
             <div class="row">
                 <div class="col-lg-6">
                     <h2>Nosotros</h2>
-                    <p>La Alcaldía de La Cima trabaja comprometida con el bienestar y el progreso de nuestra comunidad. Nuestros esfuerzos están orientados a mejorar la calidad de vida, fomentar la participación ciudadana y promover proyectos de desarrollo sostenible.</p>
+                    <p>En el corazón vibrante de La Cima, late un equipo apasionado y comprometido con el bienestar de cada uno de nuestros vecinos. Somos la Alcaldía Municipal, un grupo de servidores públicos que compartimos un profundo amor por nuestra tierra y una visión clara de un futuro próspero y lleno de oportunidades para todos.
+
+                        Desde lo alto de nuestras convicciones, trabajamos día a día con transparencia, dedicación y cercanía para construir una Cima donde cada voz sea escuchada y cada necesidad atendida. Creemos firmemente en el poder de la colaboración, en la fuerza de nuestras tradiciones y en el potencial ilimitado de nuestra gente.
+                        
+                        Nuestra misión es clara: impulsar el desarrollo integral de La Cima, fomentando un entorno seguro, saludable, con acceso a servicios de calidad, oportunidades de crecimiento económico y un profundo respeto por nuestra cultura y medio ambiente.
+                        
+                        Nos esforzamos por ser más que una administración; aspiramos a ser un puente entre las ideas y las acciones, un catalizador del progreso y un aliado incondicional de cada familia de La Cima. Con humildad y determinación, caminamos junto a ustedes, construyendo juntos la Cima que soñamos: un lugar donde florecen los sueños y se cultivan los éxitos.
+                        
+                        Con el corazón puesto en La Cima,
+                        
+                        El equipo de la Alcaldía Municipal La Cima.</p>
                 </div>
                 <div class="col-lg-6">
                     <img src="img/nosotros.jpeg" class="img-fluid" alt="Nosotros">
@@ -126,46 +150,158 @@
             </div>
         </div>
     </section>
+    <!-- Sección de Noticias -->
     <section id="noticias" class="py-5">
         <div class="container">
-            <h2 class="text-center mb-4">Noticias Recientes</h2>
+            <h2 class="text-center mb-4">Últimas Noticias</h2>
+
+            <!-- Noticia 1 -->
+            <div class="news-item mb-4">
+                <div class="row">
+                    <div class="col-md-4">
+                        <!-- Imagen visible en la sección de noticias -->
+                        <img src="img/noticia3.jpeg" alt="Clínica Municipal" class="img-fluid">
+                    </div>
+                    <div class="col-md-8">
+                        <h3><a href="#" data-bs-toggle="modal" data-bs-target="#modalNoticia1" class="text-decoration-none">Nueva clínica municipal inaugurada</a></h3>
+                        <p>La alcaldía de La Cima inauguró una moderna clínica para brindar servicios gratuitos de salud...</p>
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#modalNoticia1" class="btn btn-primary btn-sm">Leer más</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Noticia 2 -->
+            <div class="news-item mb-4">
+                <div class="row">
+                    <div class="col-md-4">
+                        <!-- Imagen visible en la sección de noticias -->
+                        <img src="img/noticia2.jpeg" alt="Limpieza Comunitaria" class="img-fluid">
+                    </div>
+                    <div class="col-md-8">
+                        <h3><a href="#" data-bs-toggle="modal" data-bs-target="#modalNoticia2" class="text-decoration-none">Jornada de limpieza comunitaria</a></h3>
+                        <p>Vecinos se unieron con personal municipal para mejorar los espacios públicos del centro...</p>
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#modalNoticia2" class="btn btn-primary btn-sm">Leer más</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Noticia 3 -->
+            <div class="news-item mb-4">
+                <div class="row">
+                    <div class="col-md-4">
+                        <!-- Imagen visible en la sección de noticias -->
+                        <img src="img/noticia1.jpeg" alt="Reparación de calles" class="img-fluid">
+                    </div>
+                    <div class="col-md-8">
+                        <h3><a href="#" data-bs-toggle="modal" data-bs-target="#modalNoticia3" class="text-decoration-none">Reparación de calles en zonas rurales</a></h3>
+                        <p>Comienza el proyecto de mejora vial que beneficiará a más de 10 comunidades rurales...</p>
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#modalNoticia3" class="btn btn-primary btn-sm">Leer más</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modales para las noticias -->
+    <!-- Modal para Noticia 1 -->
+    <div class="modal fade" id="modalNoticia1" tabindex="-1" aria-labelledby="modalNoticia1Label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalNoticia1Label">Nueva clínica municipal inaugurada</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Imagen en el modal -->
+                    <img src="img/noticia3.jpeg" alt="Clínica Municipal" class="img-fluid mb-3">
+                    <p>La alcaldía de La Cima inauguró una moderna clínica para brindar servicios gratuitos de salud. La obra beneficiará a toda la comunidad, especialmente a los sectores más vulnerables...</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para Noticia 2 -->
+    <div class="modal fade" id="modalNoticia2" tabindex="-1" aria-labelledby="modalNoticia2Label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalNoticia2Label">Jornada de limpieza comunitaria</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Imagen en el modal -->
+                    <img src="img/noticia2.jpeg" alt="Limpieza Comunitaria" class="img-fluid mb-3">
+                    <p>Vecinos se unieron con personal municipal para mejorar los espacios públicos del centro. La jornada incluyó la limpieza de calles, parques y plazas...</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para Noticia 3 -->
+    <div class="modal fade" id="modalNoticia3" tabindex="-1" aria-labelledby="modalNoticia3Label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalNoticia3Label">Reparación de calles en zonas rurales</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Imagen en el modal -->
+                    <img src="img/noticia1.jpeg" alt="Reparación de calles" class="img-fluid mb-3">
+                    <p>Comienza el proyecto de mejora vial que beneficiará a más de 10 comunidades rurales. El proyecto incluye la pavimentación de carreteras y la instalación de señalización adecuada...</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="servicios" class="py-5 bg-light">
+        <div class="container text-center">
+            <h2 class="mb-4">Servicios Municipales</h2>
             <div class="row">
-                <!-- Noticia 1 -->
+                <!-- Servicio 1 -->
                 <div class="col-md-4 mb-4">
                     <div class="card h-100 shadow-sm">
-                        <img src="img/noticia3.jpeg" class="card-img-top" alt="Noticia 1">
                         <div class="card-body">
-                            <h5 class="card-title">Nueva jornada médica</h5>
-                            <p class="card-text">La alcaldía de La Cima desarrolló una jornada médica gratuita en la comunidad Las Flores, beneficiando a más de 300 personas.</p>
-                            <a href="#" class="btn btn-primary btn-sm">Leer más</a>
+                            <i class="bi bi-file-earmark-text-fill fs-1 text-primary mb-3"></i>
+                            <h5 class="card-title">Trámites Legales</h5>
+                            <p class="card-text">Emisión de partidas, constancias, permisos y documentos oficiales.</p>
                         </div>
                     </div>
                 </div>
-                <!-- Noticia 2 -->
+                <!-- Servicio 2 -->
                 <div class="col-md-4 mb-4">
                     <div class="card h-100 shadow-sm">
-                        <img src="img/noticia1.jpeg" class="card-img-top" alt="Noticia 2">
                         <div class="card-body">
-                            <h5 class="card-title">Mejoras viales</h5>
-                            <p class="card-text">Se iniciaron las labores de bacheo y asfaltado en las principales calles del cantón El Milagro.</p>
-                            <a href="#" class="btn btn-primary btn-sm">Leer más</a>
+                            <i class="bi bi-tools fs-1 text-success mb-3"></i>
+                            <h5 class="card-title">Obras Públicas</h5>
+                            <p class="card-text">Mantenimiento de calles, alumbrado y mejora de infraestructura local.</p>
                         </div>
                     </div>
                 </div>
-                <!-- Noticia 3 -->
+                <!-- Servicio 3 -->
                 <div class="col-md-4 mb-4">
                     <div class="card h-100 shadow-sm">
-                        <img src="img/noticia2.jpeg" class="card-img-top" alt="Noticia 3">
                         <div class="card-body">
-                            <h5 class="card-title">Capacitación para emprendedores</h5>
-                            <p class="card-text">Más de 50 emprendedores locales participaron en un taller sobre marketing digital y redes sociales.</p>
-                            <a href="#" class="btn btn-primary btn-sm">Leer más</a>
+                            <i class="bi bi-people-fill fs-1 text-danger mb-3"></i>
+                            <h5 class="card-title">Atención Ciudadana</h5>
+                            <p class="card-text">Asistencia, quejas, sugerencias y comunicación directa con la comuna.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    
+
     <section id="contacto" class="py-5 bg-light">
         <div class="container">
             <h2 class="text-center mb-4">Contáctanos</h2>
@@ -193,8 +329,64 @@
             </div>
         </div>
     </section>
-        
+    <div class="mt-4">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3876.882377002639!2d-88.1770865!3d13.4795788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e6645a2e42be843%3A0x58fc94f681cb7a8f!2sSan%20Miguel%2C%20El%20Salvador!5e0!3m2!1ses!2ssv!4v1714764743001!5m2!1ses!2ssv"
+            width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <!-- Información de la Alcaldía -->
+                <div class="col-md-4 mb-3">
+                    <h5>Alcaldía de La Cima</h5>
+                    <p class="mb-1">2ª Calle Ote y 3ª Av. Norte</p>
+                    <p class="mb-1">Barrio Centro, La Cima</p>
+                    <p class="mb-1">Tel: 2666-1234</p>
+                    <p>Email: contacto@lacima.gob.sv</p>
+                </div>
+                <!-- Enlaces rápidos -->
+                <div class="col-md-4 mb-3">
+                    <h5>Enlaces rápidos</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#nosotros" class="text-white text-decoration-none">Nosotros</a></li>
+                        <li><a href="#servicios" class="text-white text-decoration-none">Servicios</a></li>
+                        <li><a href="#banner" class="text-white text-decoration-none">Inicio</a></li>
+                        <li><a href="#contacto" class="text-white text-decoration-none">Contáctanos</a></li>
+                    </ul>
+                </div>
+                <!-- Redes sociales -->
+                <div class="col-md-4 mb-3">
+                    <h5>Síguenos</h5>
+                    <a href="#" class="text-white me-3 fs-4"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="text-white me-3 fs-4"><i class="bi bi-instagram"></i></a>
+                    <a href="#" class="text-white fs-4"><i class="bi bi-twitter-x"></i></a>
+                </div>
+            </div>
+            <hr class="border-secondary">
+            <p class="text-center mb-0">&copy; 2025 Alcaldía de La Cima. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+            
 
     <script type="text/javascript" src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var navLinks = document.querySelectorAll('.navbar-collapse .nav-link');
+            var navbarCollapse = document.querySelector('.navbar-collapse');
+    
+            navLinks.forEach(function (link) {
+                link.addEventListener('click', function () {
+                    if (window.innerWidth < 992) {
+                        var bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+                            toggle: false
+                        });
+                        bsCollapse.hide();
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
